@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+</head>
+<body>
+    <h2>Grading System</h2>
+    <label for="marks">Enter Marks (0-100): </label>
+    <input type="number" id="marks" min="0" max="100">
+    <button onclick="calculateGrade()">Get Grade</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateGrade() {
+            let marks = document.getElementById("marks").value;
+            let grade;
+
+            switch (true) {
+                case (marks >= 90 && marks <= 100):
+                    grade = 'A+';
+                    break;
+                case (marks >= 80 && marks < 90):
+                    grade = 'A';
+                    break;
+                case (marks >= 70 && marks < 80):
+                    grade = 'B+';
+                    break;
+                case (marks >= 60 && marks < 70):
+                    grade = 'B';
+                    break;
+                case (marks >= 50 && marks < 60):
+                    grade = 'C';
+                    break;
+                default:
+                    grade = 'F';
+            }
+
+            document.getElementById("result").innerHTML = `Your Grade is: ${grade}`;
+        }
+    </script>
+</body>
+</html>
