@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newspaper Layout</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    .newspaper {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid black;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .header p {
+      font-style: italic;
+      margin: 0;
+      color: #555;
+    }
+
+    .article {
+      margin-bottom: 20px;
+    }
+
+    .article h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .article p {
+      text-align: justify;
+    }
+
+    .columns {
+      display: flex;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1;
+      text-align: justify;
+    }
+
+    .column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="newspaper">
+    <div class="header">
+      <h1>The Daily News</h1>
+      <p>Today's Headlines and Stories</p>
+    </div>
+
+    <div class="article">
+      <h2>Breaking News: Major Event Happens</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel mauris in nisi ultrices 
+        facilisis. Curabitur ac malesuada arcu. Fusce euismod elit in nulla fringilla, non bibendum
+        ipsum dictum. Integer viverra posuere ligula, sit amet fermentum purus condimentum at.
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <h3>Column 1: Local News</h3>
+        <p>
+          Vivamus tincidunt metus ac augue gravida, vel pulvinar nisi viverra. Nulla facilisi. 
+          Quisque tincidunt est non elit luctus, eget varius odio suscipit.
+        </p>
+      </div>
+      <div class="column">
+        <h3>Column 2: World News</h3>
+        <p>
+          Maecenas non nisi eget velit accumsan blandit at eget urna. Phasellus ac nisl sit amet 
+          felis porttitor vehicula a sit amet justo.
+        </p>
+      </div>
+      <div class="column">
+        <h3>Column 3: Sports</h3>
+        <p>
+          Sed quis leo at risus vehicula volutpat. Pellentesque habitant morbi tristique senectus 
+          et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 The Daily News. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
