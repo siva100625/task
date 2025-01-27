@@ -66,6 +66,29 @@ server.put('/product/:id', (req, res) => {
     }
 });
 
+// DELETE route to delete a product by ID
+server.delete('/product/:id', (req, res) => {
+    const productId = parseInt(req.params.id); // Get product ID from URL parameter
+
+    // Find the index of the product by ID
+    const productIndex = items.findIndex(item => item.id === productId);
+
+    if (productIndex !== -1) {
+        // Remove the product from the array
+        const deletedProduct = items.splice(productIndex, 1);
+
+        res.json({
+            message: "Product deleted successfully",
+            product: deletedProduct[0]
+        });
+    } else {
+        // Product not found
+        res.status(404).json({
+            message: "Product not found"
+        });
+    }
+});
+
 // Start the server
 server.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
